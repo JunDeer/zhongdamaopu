@@ -50,6 +50,8 @@ Page({
     showGallery: false,
     imgUrls: [],
     currentImg: 0,
+    filter:'filter:none',
+    barColor:'#FFC908'
   },
 
   /**
@@ -122,7 +124,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    // this.toStarFilter()
   },
 
   /**
@@ -195,6 +197,10 @@ Page({
           console.log(res[0]);
           infoHeight = res[0].height;
         })
+
+        if (res.data.to_star === true) {
+          this.toStarFilter()
+        }
       });
     });
   },
@@ -503,5 +509,12 @@ Page({
         }
       },
     });
+  },
+
+  toStarFilter(){
+    this.setData({
+      filter:'filter: grayscale(0.5); transition: filter 5s ease-out',
+      barColor:'#E2C86F'
+    })
   }
 })

@@ -1,3 +1,13 @@
+<page-meta page-style='{{filter}}'>
+  <navigation-bar
+    title="猫咪详情"
+    front-color="#000000"
+    background-color="{{barColor}}"
+    color-animation-duration="3000"
+    color-animation-timing-func="easeOut"
+  />
+</page-meta>
+
 <!-- 这是一张画布 -->
 <canvas style="width: 2000px; height: 2000px; border: 3rpx solid red; left: 1000000px; position: fixed;" canvas-id="bigPhoto"></canvas>
 
@@ -147,3 +157,4 @@ next-margin='60rpx'>
 </scroll-view>
 
 <mp-gallery show="{{showGallery}}" bindchange="bindGalleryChange" img-urls="{{imgUrls}}" current="{{currentImg}}" hide-on-click="{{true}}" showDelete="{{false}}" bindlongpress='bindGalleryLongPress'></mp-gallery>
+<!-- </view> -->
